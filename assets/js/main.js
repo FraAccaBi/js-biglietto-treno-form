@@ -65,30 +65,54 @@ let nameValue;
 let kmValue;
 let ageValue; 
 let prezzo;
+let elementOfferta = document.getElementById('offerta');
+let elementCostoBiglietto = document.getElementById('costo_biglietto');
 
-const element = document.getElementById('bottone')
+const bottoneGenera = document.getElementById('bottone')
 
-element.addEventListener ('click', function() {
+bottoneGenera.addEventListener ('click', function() {
     nameValue = document.getElementById("user_name").value;
-    
     kmValue = document.getElementById("km").value;
-    
+    kmValue = Number(kmValue);
     prezzo = kmValue * (0.21)
     ageValue = document.getElementById("user_age").value;
+    ageValue = Number(ageValue);
     console.log(nameValue);
     console.log(kmValue);
     console.log(ageValue);
-    alert('Il prezzo del biglietto è di euro ' + prezzo);
+
+    if ( ageValue < 18) {
+        var sconto = kmValue * (0.21) * (0.2)
+        console.log('Sconto di euro ' + sconto );
+        prezzo = prezzo - sconto 
+        console.log('Il prezzo del biglietto è di euro ' + prezzo);
+    } else if (ageValue > 65) {
+        var sconto = kmValue * (0.21) * (0.4)
+        console.log('Sconto di euro ' + sconto);
+        prezzo = prezzo - sconto 
+        console.log('Il prezzo del biglietto è di euro ' + prezzo);
+    } else {
+        console.log('nessuno sconto applicabile');
+        console.log('Il prezzo del biglietto è di euro ' + prezzo);
+    }
+    
+    
+    
+    elementOfferta.innerHTML += 'sconto di euro' + sconto
+    
+    
+    elementCostoBiglietto.innerHTML += 'costo biglietto' + prezzo
+
 })
 
-ageValue = Number(ageValue);
-kmValue = Number(kmValue);
+
+
 
 
 //inserire in modo dinamico le variabili di output per il "biglietto" 
 
 
-
+/*
 if ( Number(ageValue) < 18) {
     var sconto = km * (0.21) * (0.2)
     console.log('Sconto di euro ' + sconto );
@@ -110,3 +134,4 @@ elementOfferta.innerHTML += 'sconto di euro' + sconto
 
 const elementCostoBiglietto = document.getElementById('costo_biglietto')
 elementCostoBiglietto.innerHTML += 'costo biglietto' + prezzo
+*/
