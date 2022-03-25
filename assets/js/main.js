@@ -70,30 +70,31 @@ const element = document.getElementById('bottone')
 
 element.addEventListener ('click', function() {
     nameValue = document.getElementById("user_name").value;
-    Number(nameValue)
+    
     kmValue = document.getElementById("km").value;
-    Number(kmValue)
+    
     prezzo = kmValue * (0.21)
     ageValue = document.getElementById("user_age").value;
     console.log(nameValue);
     console.log(kmValue);
     console.log(ageValue);
+    alert('Il prezzo del biglietto è di euro ' + prezzo);
 })
 
-
-
+ageValue = Number(ageValue);
+kmValue = Number(kmValue);
 
 
 //inserire in modo dinamico le variabili di output per il "biglietto" 
 
 
 
-if (ageValue < 18) {
+if ( Number(ageValue) < 18) {
     var sconto = km * (0.21) * (0.2)
     console.log('Sconto di euro ' + sconto );
     prezzo = prezzo - sconto 
     console.log('Il prezzo del biglietto è di euro ' + prezzo);
-} else if (ageValue > 65) {
+} else if (Number(ageValue) > 65) {
     var sconto = km * (0.21) * (0.4)
     console.log('Sconto di euro ' + sconto);
     prezzo = prezzo - sconto 
@@ -101,7 +102,11 @@ if (ageValue < 18) {
 } else {
     console.log('nessuno sconto applicabile');
     console.log('Il prezzo del biglietto è di euro ' + prezzo);
-    
-    alert('Il prezzo del biglietto è di euro ' + prezzo);
 }
 
+
+const elementOfferta = document.getElementById('offerta')
+elementOfferta.innerHTML += 'sconto di euro' + sconto
+
+const elementCostoBiglietto = document.getElementById('costo_biglietto')
+elementCostoBiglietto.innerHTML += 'costo biglietto' + prezzo
