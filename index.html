@@ -12,7 +12,11 @@
 <body>
     
     <div class="main ">
-        <div class="container align-self-center bg-light p-4 m-4 form">
+        <div class="container align-self-center ">
+            <h1 class="text-uppercase text-center text-light pt-3">Calcola il prezzo del tuo biglietto</h1>
+        </div>
+        
+        <div class="container align-self-center bg-light p-4 form">
             <div class="row row-cols-3 mb-4">
                 <div class="col d-flex flex-wrap justify-content-center">
                     <label for="inputNome" class="form-label text-center w-100">Nome Cognome</label>
@@ -40,13 +44,40 @@
                 </button>
             </div>
         </div>
-        <div class="container align-self-center bg-light p-4 m-4">
-            <div class="row row-cols-5">
-                <div class="col" id="nome_passeggero"></div>
-                <div class="col" id="offerta"></div>
-                <div class="col" id="carrozza"></div >
-                <div class="col" id="codice"></div>
-                <div class="col" id="costo_biglietto"></div>
+        <div class="container align-self-center ">
+            <h2 class="text-uppercase text-center text-light py-2">Il tuo biglietto</h2>
+        </div>
+        <div class="container align-self-center bg-light p-4 ">
+            <div class="text-uppercase">Dettaglio passeggeri</div>
+            <div class="row row-cols-5 border-top border-bottom">
+                <div class="col p-3 fw-bold" id="nome_passeggero">
+                    <div class="text-uppercase  pb-3">
+                        Nome passeggero
+                    </div> 
+                </div>
+                <div class="col p-3" id="offerta">
+                    <div class="pb-5 fw-bold">
+                        Offerta
+                    </div>
+
+                </div>
+                <div class="col p-3" id="carrozza">
+                    <div class="pb-5 fw-bold">
+                        Carrozza
+                    </div>
+                    7
+                </div >
+                <div class="col p-3" id="codice">
+                    <div class="pb-5 fw-bold">
+                        Codice CP
+                    </div>
+                    979228
+                </div>
+                <div class="col p-3" id="costo_biglietto">
+                    <div class="pb-5 fw-bold">
+                        Costo biglietto
+                    </div>
+                </div>
             </div>
         </div>
         

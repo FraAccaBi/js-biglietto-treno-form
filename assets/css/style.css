@@ -2,6 +2,7 @@
     --primary-color: #B91450;
     --secondary-color: #808080;
     --btn-color: #cccccc;
+    --passenger-color: #808080;
 }
 
 body{
@@ -22,4 +23,7 @@ input, button, .form-select{
     border: 2px solid var(--primary-color);
     background-color: var(--btn-color);
     border-radius: 0.5rem;
+}
+#nome_passeggero{
+    background-color: var(--passenger-color);
 }
