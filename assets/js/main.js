@@ -66,7 +66,11 @@ const element = document.getElementById('bottone')
 
 element.addEventListener ('click', function() {
     var nameValue = document.getElementById("user_name").value;
+    var kmValue = document.getElementById("km").value;
+    var ageValue = document.getElementById("user_age").value;
     console.log(nameValue);
+    console.log(kmValue);
+    console.log(ageValue);
 })
 
 //inserire in modo dinamico le variabili di output per il "biglietto" 
