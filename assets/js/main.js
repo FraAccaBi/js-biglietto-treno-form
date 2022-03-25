@@ -61,16 +61,47 @@ Date la precedenza alla logica e al funzionamento, non perdete tempo a fare il l
 per generare il codice della carrozza e il codice CP potreste usare Math.random() */
 
 //estrarre da input il valore inserito dall'utente
+let nameValue;
+let kmValue;
+let ageValue; 
+let prezzo;
 
 const element = document.getElementById('bottone')
 
 element.addEventListener ('click', function() {
-    var nameValue = document.getElementById("user_name").value;
-    var kmValue = document.getElementById("km").value;
-    var ageValue = document.getElementById("user_age").value;
+    nameValue = document.getElementById("user_name").value;
+    Number(nameValue)
+    kmValue = document.getElementById("km").value;
+    Number(kmValue)
+    prezzo = kmValue * (0.21)
+    ageValue = document.getElementById("user_age").value;
     console.log(nameValue);
     console.log(kmValue);
     console.log(ageValue);
 })
 
+
+
+
+
 //inserire in modo dinamico le variabili di output per il "biglietto" 
+
+
+
+if (ageValue < 18) {
+    var sconto = km * (0.21) * (0.2)
+    console.log('Sconto di euro ' + sconto );
+    prezzo = prezzo - sconto 
+    console.log('Il prezzo del biglietto è di euro ' + prezzo);
+} else if (ageValue > 65) {
+    var sconto = km * (0.21) * (0.4)
+    console.log('Sconto di euro ' + sconto);
+    prezzo = prezzo - sconto 
+    console.log('Il prezzo del biglietto è di euro ' + prezzo);
+} else {
+    console.log('nessuno sconto applicabile');
+    console.log('Il prezzo del biglietto è di euro ' + prezzo);
+    
+    alert('Il prezzo del biglietto è di euro ' + prezzo);
+}
+
