@@ -8,22 +8,22 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina (formattato
 
 //chiedere numero di km 
 
-let km = parseFloat((prompt('Quanti km percorrerai?')));
+/* let km = parseFloat((prompt('Quanti km percorrerai?')));
 console.log(km);
-
+ */
 //chiedere l'età dell'utente
 
-let età = parseFloat((prompt('Quanti anni hai?')));
+/* let età = parseFloat((prompt('Quanti anni hai?')));
 console.log(età);
-
+ */
 //calcolo prezzo del biglietto in base ai km (0.21 € al km)
 
-var prezzo = km * (0.21)
-
+/* var prezzo = km * (0.21)
+ */
 //sconto del 20% per i minorenni
 //sconto del 40% per gli over 65.
 
-if (età < 18) {
+/* if (età < 18) {
     var sconto = km * (0.21) * (0.2)
     console.log('Sconto di euro ' + sconto );
     var prezzo = prezzo - sconto 
@@ -37,12 +37,12 @@ if (età < 18) {
     console.log('nessuno sconto applicabile');
     console.log('Il prezzo del biglietto è di euro ' + prezzo);
 }
-
+ */
 //output con due decimali 
-
+/* 
 prezzo = prezzo.toFixed(2)
 alert('Il prezzo del biglietto è di euro ' + prezzo);
-
+ */
 
 
 
@@ -61,5 +61,12 @@ Date la precedenza alla logica e al funzionamento, non perdete tempo a fare il l
 per generare il codice della carrozza e il codice CP potreste usare Math.random() */
 
 //estrarre da input il valore inserito dall'utente
+
+const element = document.getElementById('bottone')
+
+element.addEventListener ('click', function() {
+    var nameValue = document.getElementById("user_name").value;
+    console.log(nameValue);
+})
 
 //inserire in modo dinamico le variabili di output per il "biglietto" 
