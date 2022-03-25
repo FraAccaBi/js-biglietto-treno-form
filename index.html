@@ -11,27 +11,36 @@
 </head>
 <body>
     
-    <div class="main">
-        <div class="container form">
-            <div class="row row-cols-3 ">
-                <div class="col d-flex justify-content-center">
-                    <label for="inputNome" class="form-label">Nome Cognome</label>
-                    <input type="text" name="name" id="user_name" />
+    <div class="main ">
+        <div class="container align-self-center bg-light p-4 m-4 form">
+            <div class="row row-cols-3 mb-4">
+                <div class="col d-flex flex-wrap justify-content-center">
+                    <label for="inputNome" class="form-label text-center w-100">Nome Cognome</label>
+                    <input class="text-center" type="text" name="name" id="user_name" />
                 </div>
-                <div class="col d-flex justify-content-center">
-                    <label for="inputNome" class="form-label">Km da percorrere</label>
-                    <input type="number" name="km" id="km" />
+                <div class="col d-flex flex-wrap justify-content-center">
+                    <label for="inputNome" class="form-label text-center w-100">Km da percorrere</label>
+                    <input class="text-center" type="number" name="km" id="km" />
                 </div>
-                <div class="col d-flex justify-content-center">
-                    <label for="inputNome" class="form-label">Fascia d'età</label>
-                    <input type="number" name="age" id="user_age" />
+                <div class="col flex-wrap d-flex justify-content-center">
+                    <label for="inputNome" class="form-label text-center w-100">Fascia d'età</label>
+                    <select class="form-select text-center aria-label="Default select example" id="user_age">
+                        <option value="1">Standard</option>
+                        <option value="2">Minorenne</option>
+                        <option value="3">Over 65</option> 
+                      </select>
                 </div>
             </div>
-            <div class="row row-cols-2">
-                <button id="bottone">Genera</button><button>Annulla</button>
+            <div class="row row-cols-2 d-flex justify-content-center">
+                <button type="button" class="btn mx-5 " id="bottone">
+                    Genera
+                </button>
+                <button class="btn mx-5 ">
+                    Annulla
+                </button>
             </div>
         </div>
-        <div class="container">
+        <div class="container align-self-center bg-light p-4 m-4">
             <div class="row row-cols-5">
                 <div class="col" id="nome_passeggero"></div>
                 <div class="col" id="offerta"></div>

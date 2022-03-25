@@ -1,0 +1,25 @@
+:root{
+    --primary-color: #B91450;
+    --secondary-color: #808080;
+    --btn-color: #cccccc;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+label, button{
+    color: var(--primary-color);
+}
+input, button, .form-select{
+    border-color: var(--primary-color);
+    border-style: solid;
+    width: 16rem;
+    border-radius: 0.5rem;
+}
+
+.btn{
+    width: 16rem;
+    border: 2px solid var(--primary-color);
+    background-color: var(--btn-color);
+    border-radius: 0.5rem;
+}
