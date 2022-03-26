@@ -9,7 +9,7 @@ let prezzo;
 
 
 
-const nomePasseggero = document.getElementById('nome_passeggero');
+let nomePasseggero = document.getElementById('nome_passeggero');
 const elementOfferta = document.getElementById('offerta');
 const numeroCarrozza = document.getElementById('carrozza');
 const codiceBiglietto = document.getElementById('codice');
@@ -18,6 +18,7 @@ const elementCostoBiglietto = document.getElementById('costo_biglietto');
 
 
 const bottoneGenera = document.getElementById('bottone');
+
 
 
 
@@ -69,7 +70,6 @@ bottoneGenera.addEventListener ('click', function() {
     codiceBiglietto.innerHTML += random_biglietto
     numeroCarrozza.innerHTML += random_carrozza
 })
-
 
 
 
