@@ -19,9 +19,9 @@ const elementCostoBiglietto = document.getElementById('costo_biglietto');
 
 const bottoneGenera = document.getElementById('bottone');
 
+const bigliettoNascosto1 = document.querySelector('.biglietto1')
 
-
-
+const bigliettoNascosto2 = document.querySelector('.biglietto2')
 
 
 //aggiungo l'elementListener che si attiva al click del bottone Genera
@@ -34,6 +34,11 @@ bottoneGenera.addEventListener ('click', function() {
     console.log(nameValue);
     console.log(kmValue);
     console.log(ageValue);
+    
+    //rendo visibile il biglietto  rimuovendo la classe d-none
+
+    bigliettoNascosto1.classList.remove('d-none')
+    bigliettoNascosto2.classList.remove('d-none')
 
     //attribuisco gli sconti alla fascia d'età selezionata
     if ( ageValue == 2) {

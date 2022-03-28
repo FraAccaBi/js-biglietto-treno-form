@@ -27,3 +27,7 @@ input, button, .form-select{
 #nome_passeggero{
     background-color: var(--passenger-color);
 }
+
+.d-none{
+    display: none;
+}

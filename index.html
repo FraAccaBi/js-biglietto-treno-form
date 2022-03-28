@@ -20,11 +20,11 @@
             <div class="row row-cols-3 mb-4">
                 <div class="col d-flex flex-wrap justify-content-center">
                     <label for="inputNome" class="form-label text-center w-100">Nome Cognome</label>
-                    <input class="text-center" type="text" name="name" id="user_name" />
+                    <input class="text-center" type="text" name="name" id="user_name" placeholder="Inserisci nome e cognome" />
                 </div>
                 <div class="col d-flex flex-wrap justify-content-center">
                     <label for="inputNome" class="form-label text-center w-100">Km da percorrere</label>
-                    <input class="text-center" type="number" name="km" id="km" />
+                    <input class="text-center" type="number" name="km" id="km" placeholder="Inserisci il numero di km"/>
                 </div>
                 <div class="col flex-wrap d-flex justify-content-center">
                     <label for="inputNome" class="form-label text-center w-100">Fascia d'età</label>
@@ -44,10 +44,10 @@
                 </button>
             </div>
         </form>
-        <div class="container align-self-center ">
+        <div class="biglietto1 container align-self-center d-none" id="biglietto1">
             <h2 class="text-uppercase text-center text-light py-2">Il tuo biglietto</h2>
         </div>
-        <div class="container align-self-center bg-light p-4 ">
+        <div class="biglietto2 container align-self-center bg-light p-4 d-none" id="biglietto2">
             <div class="text-uppercase fw-bold">Dettaglio passeggeri</div>
             <div class="row row-cols-5 border-top border-bottom">
                 <div class="col p-3 fw-bold" id="nome_passeggero">
